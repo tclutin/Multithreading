@@ -13,8 +13,8 @@ public class Lucky {
                 int currentValue = x.incrementAndGet();
                 if ((currentValue % 10) + (currentValue / 10) % 10 + (currentValue / 100) % 10 == (currentValue / 1000)
                         % 10 + (currentValue / 10000) % 10 + (currentValue / 100000) % 10) {
-                    System.out.println(currentValue);
                     count.incrementAndGet();
+                    System.out.println(count);
                 }
             }
         }
