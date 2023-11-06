@@ -10,11 +10,13 @@ public class Lucky {
         public void run() {
             while (true) {
                 int tmp;
+
                 synchronized (lock) {
-                    if (x >= 999999) {
-                        break;
-                    }
                     tmp = x++;
+                }
+
+                if (tmp >= 999999) {
+                    break;
                 }
 
                 if ((tmp % 10) + (tmp / 10) % 10 + (tmp / 100) % 10 == (tmp / 1000)
